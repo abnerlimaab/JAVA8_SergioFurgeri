@@ -5,7 +5,7 @@
 
 Autor: **Sérgio Furgeri**
 
-**Capítulos**
+**Capítulos:**
 
 1. Java 8 - Linguagem e Plataforma
 2. Aspectos Fundamentais de Java
