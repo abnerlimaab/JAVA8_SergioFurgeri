@@ -8,7 +8,7 @@ public class GuiMenuPrincipal extends JFrame {
     private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo, mnExemplos;
-    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadioButton, miLabels, miList, miListaFotos, miComboEstados, miTextArea, miDialogoMensagem, miConfirmarMensagem, miDialogoOpcao, miBarraRolagem, miBarraProgresso, miAbas, miFrameInterno, miPedidos;
+    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadioButton, miLabels, miList, miListaFotos, miComboEstados, miTextArea, miDialogoMensagem, miConfirmarMensagem, miDialogoOpcao, miBarraRolagem, miBarraProgresso, miAbas, miFrameInterno, miPedidos, miMascara;
     
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -43,6 +43,7 @@ public class GuiMenuPrincipal extends JFrame {
         miAbas = new JMenuItem("Abas");
         miFrameInterno = new JMenuItem("Frame Interno");
         miPedidos = new JMenuItem("Pedidos");
+        miMascara = new JMenuItem("Máscaras");
         mnArquivo.add(miSair);
         mnExemplos.add(miBotao);
         mnExemplos.add(miCaixaOpcao);
@@ -60,6 +61,7 @@ public class GuiMenuPrincipal extends JFrame {
         mnExemplos.add(miAbas);
         mnExemplos.add(miFrameInterno);
         mnExemplos.add(miPedidos);
+        mnExemplos.add(miMascara);
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
         setJMenuBar(mnBarra);
@@ -161,6 +163,12 @@ public class GuiMenuPrincipal extends JFrame {
             GuiPedido guiPedido = new GuiPedido();
             contentPane.removeAll();
             contentPane.add(guiPedido);
+            contentPane.validate();
+        });
+        miMascara.addActionListener((ActionEvent e) -> {
+            GuiMascara guiMascara = new GuiMascara();
+            contentPane.removeAll();
+            contentPane.add(guiMascara);
             contentPane.validate();
         });
     }
