@@ -5,10 +5,10 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class GuiMenuPrincipal extends JFrame {
-    private JDesktopPane contentPane;
+    private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo, mnExemplos;
-    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadioButton, miLabels, miList, miListaFotos, miComboEstados, miTextArea, miDialogoMensagem, miConfirmarMensagem, miDialogoOpcao, miBarraRolagem, miBarraProgresso, miAbas, miFrameInterno;
+    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadioButton, miLabels, miList, miListaFotos, miComboEstados, miTextArea, miDialogoMensagem, miConfirmarMensagem, miDialogoOpcao, miBarraRolagem, miBarraProgresso, miAbas, miFrameInterno, miPedidos;
     
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -18,8 +18,8 @@ public class GuiMenuPrincipal extends JFrame {
     private void inicializarComponentes() {
         setTitle("Menu Principal");
         setBounds(0, 0, 800, 600);
-        contentPane = new JDesktopPane();
-        setContentPane(contentPane);
+        contentPane = getContentPane();
+        //setContentPane(contentPane);
         mnBarra = new JMenuBar();
         mnArquivo = new JMenu("Arquivo");
         mnArquivo.setMnemonic('A');
@@ -42,6 +42,7 @@ public class GuiMenuPrincipal extends JFrame {
         miBarraProgresso = new JMenuItem("Barra de progresso");
         miAbas = new JMenuItem("Abas");
         miFrameInterno = new JMenuItem("Frame Interno");
+        miPedidos = new JMenuItem("Pedidos");
         mnArquivo.add(miSair);
         mnExemplos.add(miBotao);
         mnExemplos.add(miCaixaOpcao);
@@ -58,6 +59,7 @@ public class GuiMenuPrincipal extends JFrame {
         mnExemplos.add(miBarraProgresso);
         mnExemplos.add(miAbas);
         mnExemplos.add(miFrameInterno);
+        mnExemplos.add(miPedidos);
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
         setJMenuBar(mnBarra);
@@ -153,6 +155,12 @@ public class GuiMenuPrincipal extends JFrame {
             GuiFrameInterno guiFrameInterno = new GuiFrameInterno();
             contentPane.removeAll();
             contentPane.add(guiFrameInterno);
+            contentPane.validate();
+        });
+        miPedidos.addActionListener((ActionEvent e) -> {
+            GuiPedido guiPedido = new GuiPedido();
+            contentPane.removeAll();
+            contentPane.add(guiPedido);
             contentPane.validate();
         });
     }
