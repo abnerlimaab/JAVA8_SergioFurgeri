@@ -44,19 +44,22 @@ public class MenuPrincipal extends JFrame {
         });
         miTabuleiro.addActionListener((ActionEvent e) -> {
             GuiTabuleiro guiTabuleiro = new GuiTabuleiro();
-            //contentPane.removeAll();
             contentPane.add(guiTabuleiro);
             contentPane.validate();
         });
         miBandeiras.addActionListener((ActionEvent e) -> {
             GuiBandeiras guiBandeiras = new GuiBandeiras();
-            //contentPane.removeAll();
             contentPane.add(guiBandeiras);
             contentPane.validate();
         });
         miVendas.addActionListener((ActionEvent e) -> {
             GuiVendas guiVendas = new GuiVendas();
             contentPane.add(guiVendas);
+            contentPane.validate();
+        });
+        miCadastro.addActionListener((ActionEvent e) -> {
+            GuiCadastro guiCadastro = new GuiCadastro();
+            contentPane.add(guiCadastro);
             contentPane.validate();
         });
     }
