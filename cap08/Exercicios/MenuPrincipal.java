@@ -54,6 +54,11 @@ public class MenuPrincipal extends JFrame {
             contentPane.add(guiBandeiras);
             contentPane.validate();
         });
+        miVendas.addActionListener((ActionEvent e) -> {
+            GuiVendas guiVendas = new GuiVendas();
+            contentPane.add(guiVendas);
+            contentPane.validate();
+        });
     }
     
     public static void main(String[] args) {

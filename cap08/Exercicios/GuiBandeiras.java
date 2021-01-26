@@ -1,6 +1,5 @@
 package cap08.Exercicios;
 
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.JInternalFrame;
 import javax.swing.*;
