@@ -20,7 +20,7 @@ public class Exerc01 {
         calendario.setTime(agora);
         int hora = calendario.get(Calendar.HOUR_OF_DAY);
         int diaDaSemana = calendario.get(Calendar.DAY_OF_WEEK);
-        String formato = "EEE, HH";
+        String formato = "EEEE, HH";
         String mensagem = "";
         DateFormat dateFormat = new SimpleDateFormat(formato);
         if (diaDaSemana >= 1 && diaDaSemana <= 5 && hora >= 8 && hora <= 17) mensagem = dateFormat.format(agora) + "h - Estamos atendendo";
